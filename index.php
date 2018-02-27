@@ -12,7 +12,7 @@ if(isset($_POST["ContactName"]) && $_POST["ContactName"]) { // Send MAIL
 
 	if(isset($_POST["g-recaptcha-response"])) {
 		$url = 'https://www.google.com/recaptcha/api/siteverify';
-		$data = array('secret' => '6LdTyCEUAAAAAOXZUHqOicVlpFoGON6tCv7q0JEl', 
+		$data = array('secret' => '6LdTyCEUAAAAAOXZUHqOicVlpFoGON6tCv7q0JEl',
 					  'response' => $_POST["g-recaptcha-response"],
 					  'remoteip' => $_SERVER["REMOTE_ADDR"]);
 		$data = http_build_query($data,null,'&');
@@ -35,7 +35,7 @@ if(isset($_POST["ContactName"]) && $_POST["ContactName"]) { // Send MAIL
 		$Cname = $_POST["ContactName"];
 		$Cemail = $_POST["ContactEmail"];
 		$Cmsg = $_POST["ContactMessage"];
-	
+
 		$from = "TRIO GAON website (GERMAN)";
 		$to = "triogaon@gmail.com";
 		$subject = "Website-Message from www.triogaon.com";
@@ -63,7 +63,7 @@ $upcoming_count = 0;
 while($concert = getNextConcert()) {
 	if(($timesig=strtotime($concert->concertdate)) >= (time()-(24*60*60)))
 		++$upcoming_count;
-	
+
 	$day = strftime("%e",$timesig);
 	$month = strftime("%B",$timesig);
 	$weekday = htmlspecialchars(utf8_encode(strftime("%a",$timesig)));
@@ -77,7 +77,7 @@ while($concert = getNextConcert()) {
 
 	$str = "<div class='cal-block' onClick=\"window.open('{$concert->website}');\"><div class='cal-left'><div class='cal-weekday'>$weekday</div><div class='cal-day'>$day</div><div class='cal-month'>$month</div></div>\n";
 	$str .= "<div class='cal-right'><p class='cal-location'>{$concert->location}</p><div class='cal-venue'>{$concert->venue}</div><p class='cal-program'>{$concert->program}</p></div></div>\n";
-	
+
 	switch($upcoming_count) {
 		case 0: // is previous concert
 			$archive = $str . $archive;
@@ -126,12 +126,12 @@ if ($handle = opendir($thumbs_dir)) {
 	<link rel="stylesheet" href="layout.css?v=<?php echo filemtime('layout.css'); ?>">
 	<link rel="stylesheet" href="colors.css?v=<?php echo filemtime('colors.css'); ?>">
 	<link rel="stylesheet" href="responsive.css?v=<?php echo filemtime('responsive.css'); ?>">
-	
+
 	<title>TRIO GAON</title>
 
 	<link rel="stylesheet" href="cp/css/not.the.skin.css">
 	<link rel="stylesheet" href="cp/circle.skin/circle.player.css">
-	
+
 	<script type="text/javascript" src='https://www.google.com/recaptcha/api.js?hl=de'  async defer></script>
 	<script type="text/javascript" src="jquery.min.js"></script>
 	<script type="text/javascript" src="cp/js/jquery.transform2d.js"></script>
@@ -141,7 +141,7 @@ if ($handle = opendir($thumbs_dir)) {
 	<script type="text/javascript" src="cp/js/mod.csstransforms.min.js"></script>
 	<script type="text/javascript" src="cp/js/circle.player.js"></script>
 <!--	<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script> -->
-	
+
 	<script type="text/javascript" src="scripts.js?v=<?php echo filemtime('scripts.js'); ?>"></script>
 	<script type="text/javascript">
 
@@ -187,7 +187,7 @@ if(isset($mailresult)) {
 
 
 
-	<input type="checkbox" id="menuopen" /><label for="menuopen" onclick></label> 
+	<input type="checkbox" id="menuopen" /><label for="menuopen" onclick></label>
 
 	<nav role="off-canvas" id="menunav">
 		<ul id="menu" class="menu-std">
@@ -198,9 +198,9 @@ if(isset($mailresult)) {
 			<li><a href="#calendartypes" title="Aufnahmen">Kalender</a></li>
 
 			<li><a href="#mediatypes" title="Aufnahmen">Medien</a></li>
-		
+
 			<li><a href="#contactform" title="Schreiben Sie uns!">Kontakt</a></li>
-			
+
 			<li id="socialmedia">
 				<a href="http://www.triogaon.com/english.php" style="background-image:url('img/eng.png');" id="language1"></a>
 				<a href="http://www.triogaon.com/korean.php" style="background-image:url('img/kor.png');" id="language2"></a>
@@ -209,10 +209,10 @@ if(isset($mailresult)) {
 				<a href="https://www.facebook.com/triogaon/" target="_blank" style="background-image:url('img/facebook.png');"></a>
 				<a href="https://www.youtube.com/channel/UCcTy2vXHWz1XdjfCtDPH_OA" target="_blank" style="background-image:url('img/youtube.png');"></a>
 			</li>
-		
+
 		</ul>
 	</nav>
-	
+
 
 	<div id="home-bg"></div>
 
@@ -309,16 +309,16 @@ if(isset($mailresult)) {
 				</div>
 
 			</div>
-	
+
 			<div id="bio2_text" class="content-big option">
 				<p><h2>Der Pianist</h2>
-				<a name="taehyung"><h1>Tae-Hyung Kim</h1></a> 
-ist heute einer der bekanntesten koreanischen Pianisten der neuen Generation. Er wurde international bekannt, als er 2004 als erster koreanischer Pianist den 1. Preis und den Beethoven-Spezial-Preis beim Internationalen Klavierwettbewerb in Porto gewann. Im selben Jahr erhielt er den 2. Preis beim Internationalen Klavierwettbewerb Jeunesses Musicales und wurde bei einer Reihe von renommierten Wettbewerben, u. a. dem Internationalen Klavierwettbewerb Hamamatsu (2006) als auch dem Internationalen Klavierwettbewerb Long-Thibaud (2007) ausgezeichnet. 
+				<a name="taehyung"><h1>Tae-Hyung Kim</h1></a>
+ist heute einer der bekanntesten koreanischen Pianisten der neuen Generation. Er wurde international bekannt, als er 2004 als erster koreanischer Pianist den 1. Preis und den Beethoven-Spezial-Preis beim Internationalen Klavierwettbewerb in Porto gewann. Im selben Jahr erhielt er den 2. Preis beim Internationalen Klavierwettbewerb Jeunesses Musicales und wurde bei einer Reihe von renommierten Wettbewerben, u. a. dem Internationalen Klavierwettbewerb Hamamatsu (2006) als auch dem Internationalen Klavierwettbewerb Long-Thibaud (2007) ausgezeichnet.
 Im Jahre 2013 gewann er den 1. Preis und den Publikumspreis beim Internationalen Klavierwettbewerb Hastings, wodurch ihm der internationale Durchbruch in seiner Pianistenkarriere gelang. Zus&auml;tzlich zu seinen bisherigen Wettbewerbsgewinnen erreichte er im Jahr 2010 den 5. Platz beim K&ouml;nigin-Elisabeth-Musikwettbewerb, welcher zu einem der drei gr&ouml;&szlig;ten Klavierwettbewerbe der Welt z&auml;hlt.
 				</p><p>
-Seitdem weitet Tae-Hyung Kim seine musikalischen Aktivit&auml;ten aus, indem er mit bedeutenden internationalen Orchestern wie dem Royal Philharmonic Orchestra, dem Russia National Philharmonic, dem Tokyo Symphony Orchestra, der Kioi Sinfonietta Tokyo, dem National Orchestra of Belgium, dem Orchestre National de France und unter anderem mit den renommierten Dirigenten Vladimir Spivakov, Marin Alsop, Emil Tabakov und Vakhtang Matchavariani spielte. 
+Seitdem weitet Tae-Hyung Kim seine musikalischen Aktivit&auml;ten aus, indem er mit bedeutenden internationalen Orchestern wie dem Royal Philharmonic Orchestra, dem Russia National Philharmonic, dem Tokyo Symphony Orchestra, der Kioi Sinfonietta Tokyo, dem National Orchestra of Belgium, dem Orchestre National de France und unter anderem mit den renommierten Dirigenten Vladimir Spivakov, Marin Alsop, Emil Tabakov und Vakhtang Matchavariani spielte.
 				</p><p>
-Nach seinem Studiumsabschluss an der Korean National University of Arts kam er nach Deutschland, wo er an der Hochschule f&uuml;r Musik und Theater M&uuml;nchen die Meisterklasse f&uuml;r Klavier bei Prof. Elisso Wirssaladze und die Meisterklasse f&uuml;r Liedgestaltung bei Prof. Helmut Deutsch absolvierte. Er f&uuml;hrte danach seine Ausbildung am Staatlichen Tschaikowski-Konservatorium in Moskau bei Prof. Elisso Wirssaladze fort und vertiefte dort sein Verst&auml;ndnis und seine Sensibilit&auml;t f&uuml;r Musik weiter. Derzeit h&auml;lt er sich in M&uuml;nchen auf und absolviert sein Studium der Kammermusik mit Christoph Poppen und Friedemann Berger an der Hochschule f&uuml;r Musik und Theater M&uuml;nchen. 
+Nach seinem Studiumsabschluss an der Korean National University of Arts kam er nach Deutschland, wo er an der Hochschule f&uuml;r Musik und Theater M&uuml;nchen die Meisterklasse f&uuml;r Klavier bei Prof. Elisso Wirssaladze und die Meisterklasse f&uuml;r Liedgestaltung bei Prof. Helmut Deutsch absolvierte. Er f&uuml;hrte danach seine Ausbildung am Staatlichen Tschaikowski-Konservatorium in Moskau bei Prof. Elisso Wirssaladze fort und vertiefte dort sein Verst&auml;ndnis und seine Sensibilit&auml;t f&uuml;r Musik weiter. Derzeit h&auml;lt er sich in M&uuml;nchen auf und absolviert sein Studium der Kammermusik mit Christoph Poppen und Friedemann Berger an der Hochschule f&uuml;r Musik und Theater M&uuml;nchen.
 				</p><p>
 Tae-Hyung Kim wird dankend seit 2008 von der DAEWON Cultural Foundation gef&ouml;rdert. Er wird generell von Presto Artists and Entertainment vertreten, in Frankreich und den Benelux-Staaten dabei mit Weinstadt Artists Management und in Russland/GUS in Zusammenarbeit mit SMOLART Concert Agency.
 				</p>
@@ -346,7 +346,7 @@ Als Solistin trat Jehye Lee mit der Nordb&ouml;hmischen Philharmonie Teplice, de
 Sie konzertierte in S&auml;len wie dem Seoul Arts Center, der Jordan Hall in Boston, der Dvorak Hall in Prag, der Victoria Hall in Genf, dem Prinzregententheater in M&uuml;nchen oder dem Grand Theater in Bordeaux.
 				</p><p>
 Als Kammermusikerin wird Jehye Lee regelm&auml;&szlig;ig zu Festivals eingeladen.
-Sie arbeitete mit K&uuml;nstlern wie András Schiff, Yuri Bashmet, Gary Hoffman, Menahem Pressler, Misha Maisky, Frans Helmerson, Gidon Kremer, Tatjana Grindenko und Miriam Fried zusammen.				
+Sie arbeitete mit K&uuml;nstlern wie András Schiff, Yuri Bashmet, Gary Hoffman, Menahem Pressler, Misha Maisky, Frans Helmerson, Gidon Kremer, Tatjana Grindenko und Miriam Fried zusammen.
 
 				</p>
 			</div>
@@ -360,15 +360,15 @@ nuancenreiches Rubato zeugten von einer Verinnerlichung jedes Tons&laquo; (Reutl
 				<a name="samuel"><h1>Samuel Lutzker</h1></a> ist seit Fr&uuml;hjahr 2014 Mitglied im Symphonieorchester des Bayerischen Rundfunks unter Chefdirigent Mariss Jansons. Nach seinem Jungstudium in D&uuml;sseldorf bei Claus Reichardt studierte er in Berlin und Weimar bei Jens Peter Maintz und Wolfgang Emanuel Schmidt. Au&szlig;erdem erhielt er wichtige Impulse auf Meisterkursen unter Anderen mit Heinrich Schiff, David Geringas und Frans Helmerson.</p>
 <p>Er ist Stipendiat der Studienstiftung des Deutschen Volkes, der Villa Musica-Stiftung und der Werner Richard - Dr. Carl D&ouml;rken Stiftung, sowie Preistr&auml;ger verschiedener nationaler und internationaler Wettbewerbe wie dem Bodensee-Musikwettbewerb, dem Khachaturian-Wettbewerb und dem Wettbewerb der Sinfonima-Stiftung.</p>
 <p>Neben vielf&auml;ltigen Rezitalen und solistischen Auftritten bildet die Kammermusik einen Schwerpunkt seiner T&auml;tigkeit. In verschiedenen Ensembles hat er in Europa und Asien an Konzerten, CD-Aufnahmen und Rundfunkproduktionen mitgewirkt. Zu seinen Kammermusikpartnern z&auml;hlten unter Anderen Pierre-Laurent Aimard, Atar Arad, Lynn Harrell und Nina Tichman. Regelm&auml;&szlig;ige Einladungen  zum Kammermusikfestival des International Musicians Seminar Prussia Cove in Cornwall, England waren pr&auml;gende Inspirationsquellen.</p>
-				
+
 			</div>
 
 		</div>
 
-		
+
 	</div> <!-- musicians -->
-	
-	
+
+
 	<!-- calendar start -->
 	<div id="calendar" class="page silver">
 		<div class="content-bg-container"><div class="content-bg" style="background-image:url('img/trieste-big.jpg');"><h1>Konzerte</h1></div></div>
@@ -378,9 +378,9 @@ nuancenreiches Rubato zeugten von einer Verinnerlichung jedes Tons&laquo; (Reutl
 			<a href="javascript:void(0);" onClick="show(this,'archive');$('.calendarbox').scrollTop(0).scroll();">Vergangene</a>
 		</div>
 		<div class="content-block">
-			
+
 			<div id="cal_up"></div>
-		
+
 			<div id="upcoming" class="calendarbox option active">
 
 			<div style="background:#d9d1be;">
@@ -393,13 +393,13 @@ nuancenreiches Rubato zeugten von einer Verinnerlichung jedes Tons&laquo; (Reutl
 			<div id="archive" class="calendarbox option">
 			<?php echo $archive; ?>
 			</div>
-			
+
 			<div id="cal_down"></div>
 
 		</div>
 	</div>
 	<!-- calendar stop -->
-	
+
 	<div id="media" class="page brass">
 		<div class="content-bg-container"><div class="content-bg" style="background-image:url('img/media.jpg');"><h1>Medien</h1></div></div>
 
@@ -461,7 +461,7 @@ nuancenreiches Rubato zeugten von einer Verinnerlichung jedes Tons&laquo; (Reutl
 						<h2>&raquo;The House Concert&laquo; - Seoul 2016 - Live Recording</h2>
 					</div>
 				</li>
-			</ul>		
+			</ul>
 
 
 			<ul id="audios" class="mediabox option">
@@ -479,7 +479,7 @@ nuancenreiches Rubato zeugten von einer Verinnerlichung jedes Tons&laquo; (Reutl
 						</ol>
 						</h2>
 					</div>
-					
+
 				</li>
 				<li>
 					<div class="bullauge" style="background-image:url('img/ravel.jpg')"></div>
@@ -495,22 +495,22 @@ nuancenreiches Rubato zeugten von einer Verinnerlichung jedes Tons&laquo; (Reutl
 						</ol>
 						</h2>
 					</div>
-					
+
 				</li>
 				<li class="playaudio" title="poulenc.mp3">
 					<div class="bullauge" style="background-image:url('img/poulenc.jpg')"></div>
 					<div>
 						<h1>Francis Poulenc</h1><h2>&raquo;Les Chemins de l'Amour&laquo;</h2>
-					</div>							
+					</div>
 				</li>
 				<li class="playaudio" title="francaix.mp3">
 					<div class="bullauge" style="background-image:url('img/francaix.jpg')"></div>
 					<div>
 						<h1>Jean Franc&#807;aix Piano Trio (1986)</h1>
 						<div class="footnote">Live Recording - Brussels, October 2016 - Korean Culture Center Brussels</div>
-					</div>							
+					</div>
 				</li>
-			</ul>	
+			</ul>
 
 			<div id="photos" class="content-block option">
 <p>
@@ -528,7 +528,7 @@ echo "<div class=\"bullauge\" style=\"background-image:url('$thumbs_dir$diashow[
 <b>Photo-Credits:</b> Photos on this Website by Wulf Schaeffer, Shin-Joong Kim - Copyright &#169; 2016
 </p>
 
-			
+
 		</div>
 
 	</div>
@@ -560,7 +560,7 @@ echo "<div class=\"bullauge\" style=\"background-image:url('$thumbs_dir$diashow[
 				<form id="send_mail" action="index.php#contact" method="post">
 					<h2>Schreiben Sie uns...</h2>
 					<br />
-					
+
 					<div class="g-recaptcha" data-sitekey="6LdTyCEUAAAAADyHW2kOHyE1-fczakfDPSJN5Jyj" data-callback="onSubmit" data-size="invisible" data-badge="inline"></div>
 					<input type="text" id="CName" name="ContactName" placeholder="Vor- und Zuname..." />
 					<input type="text" id="CEmail" name="ContactEmail" placeholder="Emailadresse..."/>
@@ -580,24 +580,24 @@ echo "<div class=\"bullauge\" style=\"background-image:url('$thumbs_dir$diashow[
 			</div>
 		</div>	<!--content-block -->
 	</div>
-		
 
 
-	
+
+
 	<div id="videoplayer">
 		<iframe title="YouTube video player" width="780" height="428" id="videoframe" frameborder="0"></iframe>
 		<img class="icon_close" src="img/close.png" onClick="$('#videoframe').attr('src','about:blank');$('#videoplayer').css('display','none');" />
 	</div>
-	
+
 	<div id="diashow">
 		<img class="icon_close" src="img/close.png" onClick="$('#diashow').css('display','none');" />
 		<img class="icon_next" src="img/next.png" onClick="dia_next();" />
 		<img class="icon_prev" src="img/prev.png" onClick="dia_prev();" />
 		<img id="dia" />
 	</div>
-	
 
-	
+
+
 	<div id="audioplayer">
 		<img class="closewin" src="img/close.png" onClick="playaudio();"/>
 
@@ -616,7 +616,7 @@ echo "<div class=\"bullauge\" style=\"background-image:url('$thumbs_dir$diashow[
 			<li><a class="cp-pause" style="display:none;" tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
 		</ul>
 	</div>
-		
+
 
 
 </body>
