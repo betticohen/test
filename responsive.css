@@ -1,0 +1,199 @@
+input#menuopen + label:after {
+    position: absolute;
+
+    content: "\2261";
+    font-size: 50px;
+    line-height:40px
+}
+
+
+input#menuopen + label {
+  position: fixed;
+  top:20px;
+  left:10px;
+  z-index:5000;
+  width: 2em;
+
+  line-height:60px;
+  height:60px;
+  margin-left:auto; margin-right:auto;
+
+  display: none;
+
+  padding: .35em;
+  font-size: 1.1em;
+  color: #fff;
+  transition: color .3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	ul.menu-small { height:auto; text-align:center; }
+	ul.menu-small #homelogo {
+		width: 100%;
+		text-align: center;
+		border:none;
+	}
+
+	ul.menu-small li#socialmedia { height:auto; top:0; }
+
+	ul.menu-small li {
+		padding:20px 20px 20px 20px !important;
+		border-bottom:10px solid transparent;
+	}
+	ul.menu-small li:hover {
+		border-bottom:10px solid white;
+		border-top:none !important;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	#contact div.content-small { width:100%; text-align:center; }
+	#contact div.content-big { width:100%; }
+	#musicians div.content-small { width:100%; text-align:center; }
+	#musicians div.content-big { width:100%; }
+	#bio_img { display:none; }
+
+}
+
+/* Phone version */
+@media only screen and (max-width: 800px) {
+	html,body {
+		font-size: 18px;
+		line-height:1.225;
+	}
+	input#menuopen + label {
+    	display:block;
+	}
+	
+	div.bullauge { margin-bottom:50px; }
+
+	input#menuopen:checked ~ label {  color: orange; }
+	input#menuopen:checked ~ nav > ul#menu { left:10%; }
+
+
+	ul#menu { 
+		position:fixed;
+		left:10%;
+		top:14%; top:14vmax;
+		left:-105%;
+		margin-top:30px;
+		width:80%;
+		height:auto;
+		list-style-type:none;
+		padding:0;
+		display:inline;
+		border:none;
+		text-align:center;
+	}
+
+	ul#menu li {
+		display:block;
+		text-align:left;
+		background:rgba(0,0,0,0.6);
+		box-shadow:0 0 10px black;
+		height:auto;
+		border:none;
+		padding:40px 20px 40px 20px !important;
+	}
+	ul#menu li:hover { border:none; }
+
+	ul#menu #homelogo { width:0; height:0; padding:0; position:fixed; left:-100px; }
+	ul#menu #logo {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		left: 0;
+		font-size:70px;
+		font-size:10vmax;
+		height: 14%;
+		height:14vmax;
+		padding-left:70px;
+		background: rgba(0,0,0,0.6);
+		box-shadow: 0 0 10px black;
+		text-align: center;
+	}
+	
+
+	ul#menu li#socialmedia { position:static; padding:40px 20px 40px 20px !important; }
+	ul#menu li#socialmedia a { position:static; width:50px; height:50px; margin:5px; padding:0; }
+	
+
+	div.content-bg { border:none; }
+
+	div.page a[href] {
+		width:auto; height:auto;
+		padding:10px;
+		line-height:1;
+	}
+	
+	div#concertbubble {
+		transform:none;
+		width:100%;
+
+		color:white;
+		background:indianred;
+		position:absolute;
+		top:auto;
+		right:30px;
+		bottom:10px;
+		width:40% !important;
+		font-size:5vmax;
+		opacity:.9;
+	}
+	div#concertbubble:hover {
+		transform:none;
+	}
+	div#language {
+		bottom:7px;
+		right:10px;
+	}
+	
+	div.content-bg { background-image:none !important; }
+}
+
+@media (max-width: 600px) {
+	#audios { width:100%; margin:0; padding:0; }
+	#videos { width:100%; margin:0; padding:0; }
+	#media div.bullauge { margin:0; }
+	ul.mediabox div { max-width:100%; }
+	
+	div.content-big, div.content-small {
+		float:initial;
+		display:block;
+		width:100%;
+		padding:10px 10px 10px 10px;
+	}
+
+	#home div.content-block { width:100%; }
+	#home { background-size:contain; }
+	div#language { 	position:absolute; }
+
+	h2 { margin:0; }
+	
+
+}
+@media screen and (orientation:portrait) and (max-width:800px) {
+	#home-bg { background-image:url('img/triohoch.jpg'); }
+}
+@media screen and (orientation:landscape) and (max-width:800px) {
+	ul#menu { width:100%; }
+	input:checked ~ nav > ul#menu { left: 0; }
+	
+	ul#menu li {
+		display:inline-block;
+		width:32%;
+	}
+	ul#menu li#socialmedia {
+		width:auto;
+		padding:0;
+	}
+	ul#menu #logo {
+		text-shadow:0 0 16px black;
+		background:linear-gradient(to bottom,rgba(0,0,0,0.6),transparent);
+		box-shadow:none;
+	}
+}

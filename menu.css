@@ -1,0 +1,183 @@
+ul.menu-std #logo { /* Logo */
+	white-space:nowrap;
+	position:absolute;
+	top:-150px;
+	right:0;
+	font-variant:small-caps;
+	font-family: 'Poiret One';
+	font-size: 144px; 
+	font-weight:100;
+	color:white;
+	text-decoration:none;
+	text-transform:none;
+	letter-spacing:0;
+
+}
+
+
+
+ul.menu-std {
+	position:absolute;
+	bottom:50px; 
+	right:0px;
+	z-index:20;
+	height:130px;
+	width:75%;
+
+	border-top:6px solid white;
+	text-shadow:2px 2px 12px black;
+	text-align:right;
+	overflow:visible;
+}
+
+
+.menu-top:before {
+	content:'\AC00 \C628 ';
+	color:#f1d3ba;
+}
+
+ul#menu, ul#menu ul {
+	list-style-type:none;
+	padding:0; 
+	margin:0;
+	transition:.3s all ease-in;
+}
+
+/* alle links im menü */
+ul#menu a { 
+	text-decoration:none; 
+	background:none;
+
+	font-size:23px;
+	font-weight:bold;
+	text-transform:uppercase;
+	letter-spacing:3px;
+	
+	color:white;
+	font-weight:200;
+	line-height:20px;
+	
+	-webkit-transform: translate3d(0, 0, 0);
+   -moz-transform: translate3d(0, 0, 0);
+   -ms-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+
+}
+
+
+
+ul.menu-small #logo { /* Logo */
+	position:static;
+	font-variant:small-caps;
+	font-family: 'Poiret One';
+	font-size: 72px;
+	font-weight:100;
+	color:white;
+	text-decoration:none;
+	padding-left:20px;
+	padding-right:20px;
+	white-space:nowrap;
+	text-transform:none;
+	letter-spacing:0;
+
+}
+
+
+
+
+ul.menu-small {
+	position:fixed;
+	top:0px; right:0px;
+	z-index:20;
+	height:100px;width:100%;
+	overflow:hidden;
+	text-align:left;
+	background:rgba(0,0,0,0.4);
+	background: linear-gradient(to bottom,black,rgba(0, 0, 0, 0.2));
+/*	box-shadow:0 0 12px black; */
+	box-shadow:1px 1px 4px black;
+	text-shadow:1px 1px 4px black;
+
+}
+ul.menu-small:hover { background-color:rgba(0,0,0,0.9); }
+
+ul.menu-small #_home:before {
+	content:'\AC00 \C628 ';
+	color:#f1d3ba;
+}
+
+
+/* Menüpunkte */
+ul#menu > li {
+	display:inline-block;
+	height:100%;
+	vertical-align:top;
+	overflow:visible;
+}
+
+ul.menu-small > li {
+	padding:50px 10px 50px 10px;
+}
+ul.menu-small > li > a {
+	padding:50px 10px 50px 10px;
+}
+
+ul.menu-std > li {
+	padding:50px 20px 50px 20px;
+}
+ul.menu-std > li > a {
+	padding:50px 20px 50px 20px;
+}
+
+
+
+/* farbe menü falls maus drüber */
+ul#menu > li:hover {
+/*	background:linear-gradient(to bottom, white, transparent); */
+	border-top:10px solid white;
+	z-index:21;
+}
+ul#menu > li[id]:hover { border:none; }
+
+
+
+ul#menu li#socialmedia { padding:0; white-space:nowrap; }
+/* alle socialmenus  */
+ul#menu li#socialmedia a {
+	border:none;
+	width:40px; height:40px;
+	border-radius:100%;
+	display:inline-block;
+	overflow:hidden;	
+	z-index:6;
+	margin-left:6px;
+	margin-right:-4px;
+	transition:.2s all ease-in;
+	border:4px solid rgba(255,255,255,.6);
+	background-size:100%;
+	background-position:center;
+	background-repeat:no-repeat;
+	padding:0;
+}
+
+ul#menu li#socialmedia a#language1, ul#menu li#socialmedia a#language2 {
+	background-size:125%;
+}
+
+ul.menu-std li#socialmedia {
+	position:absolute;
+	top:-23px;
+	right:100%;
+}
+ul.menu-small li#socialmedia {
+	position:absolute;
+	top:30px;
+	left:auto;
+	right:20px;
+}
+/* färbe socialmenu falls maus drüber */
+ul#menu li#socialmedia a:hover {
+	transform:scale(1.2);
+	box-shadow: 2px 2px 12px black;
+}
+

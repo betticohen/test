@@ -1,0 +1,678 @@
+@import 'https://fonts.googleapis.com/css?family=Poiret+One|Julius+Sans+One|Open+Sans:300,300italic,400,400italic';
+
+
+body {
+	overflow-x:hidden;
+	font-family:'Open Sans',sans-serif;
+	font-size: 18px;
+	line-height:1.825;
+	font-weight:300;
+	margin:0;
+	color:black;
+	-webkit-font-smoothing:subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	opacity:0;
+	transition:1.5s opacity ease-in;
+}
+
+/* Advanced Checkbox Hack */
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.grecaptcha-badge {
+    display: none;
+}
+
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+
+* {
+	box-sizing:border-box;
+}
+
+a {
+	text-decoration:none;
+}
+
+h1 {
+font-variant:small-caps;
+font-family: 'Poiret One';
+font-size: 4.8em;
+/* font-size: 8vmax; */
+text-shadow:1px 1px 2px rgba(0,0,0,.1);
+margin:0;padding:0;
+
+
+}
+
+h2 {
+
+font-family: 'Julius Sans One';
+font-size: 1.3em;
+text-shadow:none;
+font-style:italic;
+/* color:#6d4e69; */
+margin:0;
+padding:0;
+
+
+}
+
+
+
+div.page {
+	width:100%;
+	float:left;
+	background-position:inherit;
+
+}
+
+div.page a[href] { 
+	display:inline-block; 
+	width:180px; height:60px; 
+	border:2px solid black; 
+	font-family:"Open Sans";
+	text-transform:uppercase;
+	font-size:1em;
+	line-height:1em;
+	font-weight:bold;
+	letter-spacing:3px;
+	text-align:center;
+	    border-radius: 4px;
+	padding:1em;
+	color:inherit;
+	border-color:inherit;
+	margin:5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+    text-shadow: 0 1px 3px rgba(0,0,0,.1);
+    transition:.05s all ease-in;
+}
+
+
+.option { display:none !important; }
+.option.active { display:inline-block !important; }
+
+
+div.content-bg, div.content-bg-container {
+	will-change: background-position;
+}
+
+div.content-bg-container {
+	background-position:center;
+	float:left; 
+	display:inline-block; 
+	width:100%;
+	position:relative;
+	z-index:1;
+}
+
+div.content-bg {
+	float:left;
+	display:inline-block;
+
+	width:100%;
+	border:1em solid;
+
+	padding-top:60vh;
+
+
+	margin-top:-1px; /* prevent bug */
+	margin-bottom:-1px;
+	background-size:cover;
+	background-position:inherit;
+	background-attachment:fixed; 
+	background-repeat:no-repeat;
+	box-shadow: inset 1px 2px 9px rgba(0,0,0,.7);
+}
+
+
+
+div.content-bg h1, div.content-bg h2
+{ text-shadow: 3px 4px 9px rgba(0,0,0,.7);}
+
+div.content-bg h1, div.content-bg h2 { text-align:center; }
+
+
+div.content-block {
+	overflow:hidden;
+	padding:5% 0 5% 0;
+	float:left;
+	display:inline-block;
+	position:relative;
+   width:100%;
+}
+
+
+
+div.content-small, div.content-big {
+	padding:1em;
+	display:inline-block;
+	float:left;
+	overflow:visible;
+}
+
+div.content-small { width:25%; position:relative; z-index:1; background:none;}
+div.content-big { width:75%; padding-left:15%; padding-right:5%; z-index:2; box-shadow:0 0 12px black; }
+
+
+
+
+div.bullauge {
+	width:165%;
+	padding-bottom:165%;
+	border-radius:100%;
+	background-size:cover;
+	background-position:center;
+	display:inline-block;
+	margin:0.5em;
+	box-shadow:0 0 12px black;
+}
+
+
+/* CALENDAR */
+
+#cal_up, #cal_down {
+	display:inline-block;
+	width:80%;
+	height:0.5em;
+	text-align:center;
+	font-size:2.5em;
+	color:white;
+	border-top:2px solid white;
+	transition:.2s all ease-in;
+	position:relative;
+}
+
+#cal_up:hover:before, #cal_down:hover:before {
+	transform:scale(1.1);
+}
+
+#cal_up:before, #cal_down:before {
+	content:'\2191';
+	background:#d9d1be;
+	border:2px solid white;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+    text-shadow: 0 1px 3px rgba(0,0,0,.1);
+	border-radius:100%;
+	display:inline-block;
+	width:2em; height:2em;
+	cursor:pointer;
+	transition:.5s all ease-in;
+
+}
+
+#cal_down {
+	top:-0.2em;
+}
+#cal_down:before {
+	content:'\2193';
+	position:relative;
+	bottom:.3em;
+}
+#cal_up:before {
+	position:relative;
+	bottom:1.7em;
+}
+#cal_up {
+	opacity:0;
+	top:1.5em;
+}
+
+
+.calendarbox {
+	width:100%;
+	height:30em;
+	overflow:hidden;
+}
+
+.cal-block {
+	display:inline-block;
+	width:100%;
+	cursor:pointer;
+	font-family:"Julius Sans One";
+}
+.cal-block div { line-height:1; }
+
+.cal-left {
+	display:inline-block;
+	width:4em;
+	height:4em;
+	font-size:2em;
+	overflow:visible;
+	border-radius:100%;
+/*	border:2px solid gray; */
+}
+.cal-block:before {
+	transition:.7s opacity ease-in;
+	display:inline-block;
+	opacity:0;
+	content:'INFO';
+	width:3em;
+	height:3em;
+	vertical-align:top;
+	margin-top:.5em;
+	border-radius:100%;
+	background-color:white;
+	color:#cdc0a4;
+	font-size:2em;
+	line-height:3em;
+}
+.cal-block:hover:before { opacity:1; }
+
+.cal-right {
+	display:inline-block;
+	min-width:10em;
+	width:60%;
+	border-bottom:2px solid gray;
+}
+
+.cal-weekday {
+	font-size:0.7em;
+	text-transform:uppercase;
+	font-variant:small-caps;
+}
+.cal-day {
+	font-size:2.0em;
+}
+.cal-month {
+	font-size:0.7em;
+	text-transform:uppercase;
+	font-variant:small-caps;
+}
+.cal-location {
+	font-size:1.5em;
+	margin:10px 0 10px;
+}
+.cal-venue {
+	font-size:1.2em;
+}
+.cal-program {
+	font-size:1.2em;
+	font-style:italic;
+	margin-left:20px;
+}
+
+#archive { color:gray; }
+#calendartypes { padding-bottom:0; }
+
+/* MEDIA */
+
+ul.mediabox {
+	list-style-type:none;
+	box-shadow:0 0 12px black;
+	margin:0 10% 0 10%;
+	float:left;
+	width:80%;
+	padding:0;
+}
+
+ul.mediabox li {
+	text-align:left;
+}
+
+li.playvideo {
+	display:inline-block;
+	width:100%;
+	text-align:left;
+	cursor:pointer;
+	float:left;
+}
+li.playaudio {
+	cursor:pointer;
+}
+
+div#photos { padding:0 5% 5% 5%; }
+div#photos div.bullauge {
+	width:11em;
+	height:11em;
+	padding:0;
+	margin:0.7em;
+	cursor:pointer;
+	position:relative;
+	transition:.2s all ease-in;
+	-webkit-transform: translate3d(0, 0, 0);
+   -moz-transform: translate3d(0, 0, 0);
+   -ms-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+
+}
+div#photos div.bullauge:hover {
+	transform:translate3d(0,0,0) scale(1.1);
+	z-index:10;
+}
+
+
+ul.mediabox div.bullauge {
+	width:8.4em;
+	height:8.4em;
+	padding:0;
+	margin:0 .5em 0 -2.78em;
+}
+ul.mediabox div {
+	display:inline-block;
+	vertical-align:middle;
+}
+
+ul.mediabox h1 {
+	font-size:1.5em;
+	text-transform:uppercase;
+	line-height:normal;
+	font-family:"Julius Sans One";
+}
+ul.mediabox h2 {
+	font-size:1.1em;
+	font-weight:100;
+	margin:0;
+	font-style:normal;
+}
+
+
+img.icon_close, img.icon_next, img.icon_prev {
+	position:absolute;
+	width:2.2em;
+	height:2.2em;
+	top:0;
+	right:0;
+	z-index:10;
+	border-radius:100%;
+	cursor:pointer;
+	transition:.2s all ease-in;
+	-webkit-transform: translate3d(0, 0, 0);
+   -moz-transform: translate3d(0, 0, 0);
+   -ms-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+
+}
+img.icon_next {	top:50%; }
+img.icon_prev { right:auto; left:0; top:50%; }
+img.icon_close:hover, img.icon_next:hover, img.icon_prev:hover {
+	transform:scale(1.1);
+	opacity:0.9;
+
+}
+
+img#dia {
+	max-height:95%;
+	max-width:95%;
+	height:auto;
+	position:fixed;
+	top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	box-shadow: 0 0 16px black;
+
+}
+
+div#videoplayer, div#diashow {
+	display:none;
+	position:fixed;
+	background:rgba(0,0,0,0.6);
+	z-index:50;
+	width:100%;
+	height:100%;
+	top:0;left:0;
+}
+
+iframe#videoframe {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    box-shadow: 0 0 16px black;
+	height:90%;
+	width:90%;
+	position:fixed;
+	top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+div#audioplayer {
+	position:fixed;
+	right:1em;
+	bottom:1em;
+	z-index:90;
+	display:none;
+}
+div#audioplayer img.closewin {
+	position: absolute;
+    border-radius: 100%;
+    right: 1em;
+    top: 2.77em;
+    z-index: 1000;
+    height: 1.6em;
+    width: 1.6em;
+    cursor: pointer;
+}
+div#audioplayer:hover img.closewin {
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.8);
+	transform:scale(1.1);
+
+}
+	
+.cp-container { 
+	border-radius:104px; 
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.8);
+	box-sizing:content-box; 
+}
+
+
+input, select, textarea, label { font-size:0.7em; }
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 0.6em 1.1em;
+    margin: 0.5em 0;
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+
+
+input[type=submit], button {
+	width:100%;
+	padding:1em;
+
+
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+	border-width:2px;
+	border-style:solid; 
+	font-family:"Open Sans";
+	text-transform:uppercase;
+	font-size:1em;
+	line-height:1em;
+	font-weight:bold;
+	letter-spacing:3px;
+	text-align:center;
+	
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+    text-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+/* Base for label styling */
+input[type=checkbox] {
+  position: absolute;
+  left: -9999px;
+}
+
+input.styled-checkbox:not(:checked) + label,
+input.styled-checkbox:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+input.styled-checkbox:not(:checked) + label:before,
+input.styled-checkbox:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+input.styled-checkbox:not(:checked) + label:after,
+input.styled-checkbox:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: .1em; left: .3em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+input.styled-checkbox:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+input.styled-checkbox:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+input.styled-checkbox:disabled:not(:checked) + label:before,
+input.styled-checkbox:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+input.styled-checkbox:disabled:checked + label:after {
+  color: #999;
+}
+input.styled-checkbox:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+input.styled-checkbox:checked:focus + label:before,
+input.styled-checkbox:not(:checked):focus + label:before {
+  border: 2px dotted;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #4778d9!important;
+}
+
+
+
+
+
+
+
+.footnote { font-family:"Open Sans"; font-size:0.8em; line-height:1.2; font-weight:100; font-style:italic; }
+
+
+
+/* SPECIAL */
+
+
+#concertbubble div.bullauge {
+	width:3em;
+	height:3em;
+	padding:0;
+}
+
+#triography h2, #home h2 { text-align:right; } /* Special deal for quotes */
+
+div.content-block { text-align:center; }
+div.content-big, div.content-small { text-align:left; }
+
+div#musicians_top div.bullauge { 
+	vertical-align:bottom; 
+	cursor:pointer; 
+	border:none; 
+	width:8.3em; 
+	padding-bottom:0; 
+	height:8.3em; 
+	transition:.2s all ease-in;
+	transform:translate3d(0,0,0);
+}
+div#musicians_top div.bullauge:hover { transform:translate3d(0,0,0) scale(1.2); z-index:10;}
+div#musicians_top div.bullauge.active { border:0.6em solid;  }
+div#musicians_top div.bullauge.active:hover { transform:scale(1); }
+div#musicians_top div.bullauge:after { 
+	content:attr(title); 
+	position:relative; 
+	font-size:0.9em; font-weight:bold;
+	top:8.9em; left:0px;  
+	text-align:center; 
+	color:white;
+	text-shadow:2px 2px 10px black; 
+}
+div#musicians_top div.bullauge.active:after { 
+	color:#37648a;
+	top:8.3em;
+}
+
+
+
+
+div#concertbubble {
+	z-index:10;
+    display: inline-block;
+    cursor:pointer;
+    background: ivory;
+    color: indianred;
+    border: 3px dotted #cd5c5c;
+    border-radius:4px;
+    position: relative;
+    width: 15%;
+    text-transform: uppercase;
+    font-weight: 700;
+    top: 50px;
+    padding: 0.3em;
+    font-family: 'Poiret One';
+    transform: rotate(10deg);
+    box-shadow: 2px 2px 10px black;
+    font-size:1.7em;
+    font-size:2em;
+    font-size: 3vmax;
+
+    line-height: 1;
+    text-align: center;
+    transition:.2s transform ease-in;
+}
+
+div#concertbubble:hover {
+	transform: rotate(12deg) scale(1.1);
+}
+
+div#language {
+	position:fixed;
+	bottom:7px;
+	right:2.2em;
+	height:2.2em;
+}
+div#language a {
+	width:auto;
+	height:auto;
+	border:none;
+	background-size:cover;
+	padding:1em;
+	border-radius:100%;
+	transition: .2s all ease-in;
+}
+div#language a:hover { transform:scale(1.2); opacity:0.8; z-index:1; background-color:transparent; }
+div#repertoire { line-height:1.5; }
